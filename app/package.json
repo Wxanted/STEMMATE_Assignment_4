@@ -1,0 +1,12 @@
+{
+  "name": "stemmate-ui-slice",
+  "version": "0.1.0",
+  "description": "STEMMate Namibia A4 - interface layer of the vertical slice (find and save an activity offline)",
+  "type": "module",
+  "scripts": {
+    "start": "python3 -m http.server 8080",
+    "test:unit": "node --test tests/unit.test.mjs",
+    "test:e2e": "python3 tests/e2e.py"
+  },
+  "license": "UNLICENSED"
+}

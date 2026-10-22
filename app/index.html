@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>STEMMate Namibia</title>
+  <meta name="description" content="Offline-first STEM facilitator companion (A4 vertical slice)">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="app-header">
+    <p class="brand">STEMMate</p>
+    <p id="conn-badge" class="badge" role="status" aria-live="polite"></p>
+  </header>
+  <main id="main" tabindex="-1"></main>
+  <nav id="tabbar" class="tabbar" aria-label="Main" hidden>
+    <a href="#/home" data-tab="home">Explore</a>
+    <a href="#/saved" data-tab="saved">Saved</a>
+    <button type="button" id="signout">Sign out</button>
+  </nav>
+  <dialog id="dlg" aria-labelledby="dlg-title">
+    <h2 id="dlg-title"></h2>
+    <p id="dlg-body"></p>
+    <button type="button" id="dlg-ok" class="btn">Continue</button>
+  </dialog>
+  <noscript><p>STEMMate needs JavaScript to run.</p></noscript>
+  <script src="js/app.bundle.js"></script>
+</body>
+</html>

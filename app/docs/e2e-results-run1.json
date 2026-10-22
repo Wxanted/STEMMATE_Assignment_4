@@ -1,0 +1,119 @@
+{
+  "label": "run1",
+  "when": "2026-10-20T09:45:06",
+  "browser": "Chromium 141.0.7390.37",
+  "results": [
+    {
+      "id": "E01",
+      "name": "End-to-end: login, filter, view, save, see in Saved",
+      "result": "PASS",
+      "detail": "login > filter > view > save > Saved list",
+      "ms": 875
+    },
+    {
+      "id": "E02",
+      "name": "Wrong password shows error and stays on login",
+      "result": "PASS",
+      "detail": "error alert shown, stayed on login",
+      "ms": 259
+    },
+    {
+      "id": "E03",
+      "name": "Empty login flags both fields and moves focus",
+      "result": "PASS",
+      "detail": "empty form: 2 fields flagged, focus on email",
+      "ms": 215
+    },
+    {
+      "id": "E04",
+      "name": "Airplane mode: saved activity opens fully after reload",
+      "result": "FAIL",
+      "detail": "missing 'Step by step' offline",
+      "ms": 1206
+    },
+    {
+      "id": "E05",
+      "name": "Storage full shows Save Failed with recovery; retry works",
+      "result": "PASS",
+      "detail": "Save Failed shown with 3 recovery actions; retry succeeded after space freed",
+      "ms": 580
+    },
+    {
+      "id": "E06",
+      "name": "No horizontal scroll at 360x720 on all screens",
+      "result": "PASS",
+      "detail": "8 screens at 360x720: no horizontal scroll",
+      "ms": 610
+    },
+    {
+      "id": "E07",
+      "name": "Touch targets >= 44x44 px on all screens",
+      "result": "FAIL",
+      "detail": "3 targets under 44x44 px: results: A \"Change filters\" 119x20; filters: A \"Back to Explore\" 133x20; activity: A \"Back to Explore\" 133x20",
+      "ms": 568
+    },
+    {
+      "id": "E08",
+      "name": "All form controls and buttons have accessible names",
+      "result": "PASS",
+      "detail": "all inputs/selects labelled; all buttons/links have names",
+      "ms": 482
+    },
+    {
+      "id": "E09",
+      "name": "Connectivity badge uses text for Online/Offline",
+      "result": "PASS",
+      "detail": "badge text changes Online <-> Offline (text, not colour only)",
+      "ms": 187
+    },
+    {
+      "id": "E10",
+      "name": "Keyboard-only login and focus management",
+      "result": "PASS",
+      "detail": "tab order skip-link>email>password>btn block; Enter submits; focus lands on h1",
+      "ms": 362
+    },
+    {
+      "id": "E11",
+      "name": "Protected screen redirects when not signed in",
+      "result": "PASS",
+      "detail": "unauthenticated #/saved redirects to login",
+      "ms": 213
+    },
+    {
+      "id": "E12",
+      "name": "Second user cannot see first user's saved activities",
+      "result": "PASS",
+      "detail": "user 2 sees empty Saved list after user 1 saved an activity",
+      "ms": 672
+    },
+    {
+      "id": "E13",
+      "name": "Page language, landmarks, one h1, titles",
+      "result": "PASS",
+      "detail": "lang, one main, one h1 per screen, title changes per screen",
+      "ms": 462
+    },
+    {
+      "id": "E14",
+      "name": "Filter response <= 2 s under 6x CPU throttle",
+      "result": "PASS",
+      "detail": "apply-filters to results = 183 ms with 6x CPU throttle (emulation, NOT a real 2 GB device)",
+      "ms": 802
+    },
+    {
+      "id": "E15",
+      "name": "Text colour contrast meets WCAG AA (script check)",
+      "result": "PASS",
+      "detail": "computed text/background contrast >= WCAG AA on 5 screens (approximate script, not a full audit)",
+      "ms": 440
+    },
+    {
+      "id": "E16",
+      "name": "No-match filter shows message and Clear filters",
+      "result": "PASS",
+      "detail": "empty result shows message and a Clear filters recovery",
+      "ms": 554
+    }
+  ]
+}
