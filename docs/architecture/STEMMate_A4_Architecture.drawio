@@ -1,97 +1,106 @@
-<mxfile host="Electron" agent="Claude" pages="8">
+<mxfile host="app.diagrams.net" agent="Claude" pages="8">
   <diagram id="p0" name="1 System Context">
-    <mxGraphModel dx="1321" dy="926" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+    <mxGraphModel dx="1924" dy="1015" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="title" parent="1" style="text;html=1;fontSize=20;fontStyle=1;align=left;verticalAlign=top;whiteSpace=wrap;" value="1. System context" vertex="1">
           <mxGeometry height="34" width="900" x="20" y="10" as="geometry" />
         </mxCell>
+        <mxCell id="sub" parent="1" style="text;html=1;fontSize=12;align=left;verticalAlign=top;whiteSpace=wrap;fontColor=#555555;" value="Purpose: system boundary for the A3 session-planning baseline. Serves: FR-01..FR-05, PR-01, SR-01. Solid = local/offline; dashed = requires a connection." vertex="1">
+          <mxGeometry height="24" width="900" x="20" y="44" as="geometry" />
+        </mxCell>
         <mxCell id="fac" parent="1" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Facilitator&#xa;phone, often offline" vertex="1">
           <mxGeometry height="80" width="170" x="40" y="200" as="geometry" />
         </mxCell>
-        <mxCell id="sys" parent="1" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="STEMMate&#xa;offline-first attendance&#xa;(web app on the phone)" vertex="1">
-          <mxGeometry height="120" width="240" x="330" y="180" as="geometry" />
+        <mxCell id="sys" parent="1" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="STEMMate&#xa;offline-first session planner&#xa;(web app on the phone)" vertex="1">
+          <mxGeometry height="120" width="240" x="550" y="180" as="geometry" />
         </mxCell>
         <mxCell id="srv" parent="1" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;dashed=1;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Sync server&#xa;school PC or small server" vertex="1">
-          <mxGeometry height="80" width="200" x="690" y="200" as="geometry" />
+          <mxGeometry height="80" width="200" x="1070" y="200" as="geometry" />
         </mxCell>
-        <mxCell id="adm" parent="1" style="rounded=1;fillColor=#ffffff;strokeColor=#666666;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Local administrator&#xa;school or NSSDL volunteer" vertex="1">
-          <mxGeometry height="70" width="240" x="330" y="380" as="geometry" />
+        <mxCell id="cont" parent="1" style="rounded=1;fillColor=#ffffff;strokeColor=#666666;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Activity library&#xa;stored STEM activities" vertex="1">
+          <mxGeometry height="70" width="240" x="550" y="410" as="geometry" />
         </mxCell>
-        <mxCell id="e3" edge="1" parent="1" source="fac" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;endArrow=block;endFill=1;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;" target="sys" value="marks attendance (FR-06)">
+        <mxCell id="nt" parent="1" style="shape=note;fillColor=#fff2cc;strokeColor=#d6b656;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Scope: session planning only. No pupil identities, profiles, photographs, assessment data or Learner entity are collected, stored or transmitted (PR-01). Plans contain activity steps, timing, materials, safety notes and inclusion prompts." vertex="1">
+          <mxGeometry height="70" width="560" x="100" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="fac" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;endArrow=block;endFill=1;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;" target="sys" value="finds activity and edits plan (FR-01..FR-04)">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e4" edge="1" parent="1" source="sys" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;endArrow=block;endFill=1;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;dashed=1;" target="srv" value="syncs when online (FR-04)">
+        <mxCell id="e4" edge="1" parent="1" source="sys" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;endArrow=block;endFill=1;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;dashed=1;" target="srv" value="syncs saved plan when online (FR-05)">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e5" edge="1" parent="1" source="adm" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;endArrow=block;endFill=1;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;" target="sys" value="exports CSV, backs up">
+        <mxCell id="e5" edge="1" parent="1" source="cont" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;endArrow=block;endFill=1;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;" target="sys" value="saves complete activity offline (FR-03)">
           <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="D_51NALyf1iGdETBKIv3-1" parent="1" style="shape=note;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;" value="Scope note: equipment booking (FR-06) and school-management viewing (FR-07) are deferred.&#xa;No pupil names, profiles, photos or assessment data are collected." vertex="1">
-          <mxGeometry height="80" width="580" x="40" y="520" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="p1" name="2 Containers">
-    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+    <mxGraphModel dx="1693" dy="893" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="title" value="2. Containers (what runs where)" style="text;html=1;fontSize=20;fontStyle=1;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="10" width="900" height="34" as="geometry" />
+        <mxCell id="title" parent="1" style="text;html=1;fontSize=20;fontStyle=1;align=left;verticalAlign=top;whiteSpace=wrap;" value="2. Containers (what runs where)" vertex="1">
+          <mxGeometry height="34" width="900" x="20" y="10" as="geometry" />
         </mxCell>
-        <mxCell id="sub" value="Purpose: show deployable parts and the order of operations.   Serves: FR-04, FR-08, QR-03, QR-05.   Legend: numbers = order of a save; dashed = only when online." style="text;html=1;fontSize=12;align=left;verticalAlign=top;whiteSpace=wrap;fontColor=#555555;" vertex="1" parent="1">
-          <mxGeometry x="20" y="44" width="900" height="24" as="geometry" />
+        <mxCell id="sub" parent="1" style="text;html=1;fontSize=12;align=left;verticalAlign=top;whiteSpace=wrap;fontColor=#555555;" value="Purpose: deployable parts and save/sync order. Serves: FR-03..FR-05, QR-01, QR-02, PR-01, SR-01, AR-01. Numbers = save order; dashed = online-only." vertex="1">
+          <mxGeometry height="24" width="900" x="20" y="44" as="geometry" />
         </mxCell>
-        <mxCell id="phone" value="Facilitator&#39;s phone (browser)" style="rounded=1;fillColor=none;strokeColor=#888888;dashed=1;verticalAlign=top;align=left;fontStyle=1;spacingLeft=10;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="20" y="90" width="560" height="470" as="geometry" />
+        <mxCell id="phone" parent="1" style="rounded=1;fillColor=none;strokeColor=#888888;dashed=1;verticalAlign=top;align=left;fontStyle=1;spacingLeft=10;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Facilitator&#39;s phone (browser)" vertex="1">
+          <mxGeometry height="650" width="620" y="80" as="geometry" />
         </mxCell>
-        <mxCell id="server" value="School server" style="rounded=1;fillColor=none;strokeColor=#888888;dashed=1;verticalAlign=top;align=left;fontStyle=1;spacingLeft=10;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="640" y="90" width="300" height="470" as="geometry" />
+        <mxCell id="server" parent="1" style="rounded=1;fillColor=none;strokeColor=#888888;dashed=1;verticalAlign=top;align=left;fontStyle=1;spacingLeft=10;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="School server" vertex="1">
+          <mxGeometry height="500" width="300" x="930" y="290" as="geometry" />
         </mxCell>
-        <mxCell id="ui" value="Screens&#xa;sign in, roster, confirmation" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="50" y="140" width="200" height="64" as="geometry" />
+        <mxCell id="ui" parent="1" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Screens&#xa;sign in, activity list, plan editor, sync status" vertex="1">
+          <mxGeometry height="64" width="220" x="50" y="140" as="geometry" />
         </mxCell>
-        <mxCell id="sw" value="Service worker&#xa;caches the app: opens offline" style="rounded=1;fillColor=#ffffff;strokeColor=#666666;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="340" y="140" width="200" height="64" as="geometry" />
+        <mxCell id="sw" parent="1" style="rounded=1;fillColor=#ffffff;strokeColor=#666666;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Service worker&#xa;caches the app so it opens offline" vertex="1">
+          <mxGeometry height="64" width="220" x="380" y="140" as="geometry" />
         </mxCell>
-        <mxCell id="logic" value="Attendance logic&#xa;validate (FR-07), build the record" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="50" y="260" width="200" height="64" as="geometry" />
+        <mxCell id="ws" parent="1" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Workspace manager&#xa;separate signed-in facilitator workspace (SR-01)" vertex="1">
+          <mxGeometry height="70" width="220" x="50" y="260" as="geometry" />
         </mxCell>
-        <mxCell id="sync" value="Sync manager&#xa;retry; Synced / Pending / Failed (FR-08)" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="340" y="260" width="200" height="64" as="geometry" />
+        <mxCell id="plan" parent="1" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Plan logic&#xa;validate required plan fields; autosave (FR-04)" vertex="1">
+          <mxGeometry height="70" width="220" x="50" y="400" as="geometry" />
         </mxCell>
-        <mxCell id="store" value="Local store&#xa;drafts + outbox&#xa;survives closing the app" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=12;fillColor=#e1d5e7;strokeColor=#9673a6;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="50" y="410" width="200" height="90" as="geometry" />
+        <mxCell id="sync" parent="1" style="rounded=1;fillColor=#d5e8d4;strokeColor=#82b366;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Sync manager&#xa;retry; Synced / Pending / Failed (FR-05)" vertex="1">
+          <mxGeometry height="70" width="220" x="380" y="370" as="geometry" />
         </mxCell>
-        <mxCell id="api" value="API&#xa;login, validate, store once" style="rounded=1;fillColor=#f8cecc;strokeColor=#b85450;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="690" y="260" width="200" height="64" as="geometry" />
+        <mxCell id="store" parent="1" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=12;fillColor=#e1d5e7;strokeColor=#9673a6;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Local store&#xa;saved activities, drafts, outbox&#xa;survives closing the app" vertex="1">
+          <mxGeometry height="100" width="220" x="50" y="570" as="geometry" />
         </mxCell>
-        <mxCell id="db" value="Database&#xa;SQLite file&#xa;one current record per date" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=12;fillColor=#e1d5e7;strokeColor=#9673a6;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="690" y="410" width="200" height="90" as="geometry" />
+        <mxCell id="api" parent="1" style="rounded=1;fillColor=#f8cecc;strokeColor=#b85450;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="API&#xa;login, validate, store once" vertex="1">
+          <mxGeometry height="64" width="200" x="1000" y="370" as="geometry" />
         </mxCell>
-        <mxCell id="e3" value="Save" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;endArrow=block;endFill=1;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="ui" target="logic">
+        <mxCell id="db" parent="1" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=12;fillColor=#e1d5e7;strokeColor=#9673a6;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Database&#xa;SQLite file&#xa;plans + activities" vertex="1">
+          <mxGeometry height="100" width="200" x="1000" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="ui" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;endArrow=block;endFill=1;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;" target="ws" value="open workspace">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e4" value="1. write first (QR-03)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;endArrow=block;endFill=1;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="logic" target="store">
+        <mxCell id="e4" edge="1" parent="1" source="ws" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;endArrow=block;endFill=1;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;" target="plan" value="plan">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e5" value="2. flush" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;endArrow=block;endFill=1;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="logic" target="sync">
+        <mxCell id="e5" edge="1" parent="1" source="plan" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;endArrow=block;endFill=1;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;" target="store" value="1. write locally first (FR-04)">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e6" value="outbox state" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;endArrow=block;endFill=1;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="sync" target="store">
+        <mxCell id="e6" edge="1" parent="1" source="plan" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;endArrow=block;endFill=1;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;" target="sync" value="2. queue">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="sync" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;endArrow=block;endFill=1;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;libavoidRouting=1;" target="store" value="outbox state">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="440" y="455" />
+              <mxPoint x="490" y="620" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="e7" value="3. POST (online only)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;endArrow=block;endFill=1;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;dashed=1;" edge="1" parent="1" source="sync" target="api">
+        <mxCell id="e8" edge="1" parent="1" source="sync" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;endArrow=block;endFill=1;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;dashed=1;" target="api" value="3. POST (online only)">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e8" value="4. store once (QR-07)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;endArrow=block;endFill=1;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="api" target="db">
+        <mxCell id="e9" edge="1" parent="1" source="api" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;endArrow=block;endFill=1;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;" target="db" value="4. store once; acknowledge sync (FR-05)">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
@@ -105,16 +114,16 @@
         <mxCell id="title" value="3. Deployment view" style="text;html=1;fontSize=20;fontStyle=1;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="20" y="10" width="900" height="34" as="geometry" />
         </mxCell>
-        <mxCell id="sub" value="Purpose: where things run in the target setting and the demo.   Serves: QR-05, sustainability plan.   Proposed design only; do not claim a live deployment. Technology choice goes in an ADR." style="text;html=1;fontSize=12;align=left;verticalAlign=top;whiteSpace=wrap;fontColor=#555555;" vertex="1" parent="1">
+        <mxCell id="sub" value="Purpose: proposed target deployment, not proof of a live deployment. Serves: FR-03..FR-05, QR-02, SR-01. SQLite is your selected storage option; test backup and restore before claiming reliability." style="text;html=1;fontSize=12;align=left;verticalAlign=top;whiteSpace=wrap;fontColor=#555555;" vertex="1" parent="1">
           <mxGeometry x="20" y="44" width="900" height="24" as="geometry" />
         </mxCell>
-        <mxCell id="d1" value="Android phone&#xa;browser, low specification" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="40" y="200" width="200" height="90" as="geometry" />
+        <mxCell id="d1" value="Android phone&#xa;browser, low specification, shared by facilitators" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="40" y="200" width="220" height="90" as="geometry" />
         </mxCell>
         <mxCell id="d2" value="School Wi-Fi or mobile data&#xa;intermittent, often absent" style="rounded=1;fillColor=#fff2cc;strokeColor=#d6b656;dashed=1;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
           <mxGeometry x="340" y="200" width="220" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="d3" value="Small server (school PC)&#xa;Node + SQLite (proposed)&#xa;HTTPS reverse proxy" style="rounded=1;fillColor=#f8cecc;strokeColor=#b85450;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
+        <mxCell id="d3" value="Small server (school PC)&#xa;HTTPS API + SQLite file&#xa;(proposed; not yet verified)" style="rounded=1;fillColor=#f8cecc;strokeColor=#b85450;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
           <mxGeometry x="660" y="200" width="240" height="90" as="geometry" />
         </mxCell>
         <mxCell id="d4" value="Backup&#xa;nightly copy of the database file&#xa;to USB or second disk" style="rounded=1;fillColor=#ffffff;strokeColor=#666666;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
@@ -133,404 +142,467 @@
     </mxGraphModel>
   </diagram>
   <diagram id="p3" name="4 Data Model">
-    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+    <mxGraphModel dx="1628" dy="859" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="title" value="4. Logical data model" style="text;html=1;fontSize=20;fontStyle=1;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="10" width="900" height="34" as="geometry" />
+        <mxCell id="title" parent="1" style="text;html=1;fontSize=20;fontStyle=1;align=left;verticalAlign=top;whiteSpace=wrap;" value="4. Logical data model" vertex="1">
+          <mxGeometry height="34" width="900" x="20" y="10" as="geometry" />
         </mxCell>
-        <mxCell id="sub" value="Purpose: what is stored.   Serves: FR-06, QR-04 (data minimisation), QR-07 (integrity).   Learner is a label only: no names, contacts or photos.   Dashed entity = phone only." style="text;html=1;fontSize=12;align=left;verticalAlign=top;whiteSpace=wrap;fontColor=#555555;" vertex="1" parent="1">
-          <mxGeometry x="20" y="44" width="900" height="24" as="geometry" />
+        <mxCell id="sub" parent="1" style="text;html=1;fontSize=12;align=left;verticalAlign=top;whiteSpace=wrap;fontColor=#555555;" value="Purpose: logical stored data. Serves: FR-01..FR-05, PR-01, SR-01. No pupil/learner fields or Learner entity. Phone-only entity is dashed." vertex="1">
+          <mxGeometry height="24" width="900" x="20" y="44" as="geometry" />
         </mxCell>
-        <mxCell id="Fac" value="Facilitator" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;fillColor=#dae8fc;strokeColor=#6c8ebf;html=1;" vertex="1" parent="1">
-          <mxGeometry x="40" y="110" width="200" height="92" as="geometry" />
+        <mxCell id="Fac" parent="1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;fillColor=#dae8fc;strokeColor=#6c8ebf;html=1;" value="Facilitator" vertex="1">
+          <mxGeometry height="92" width="220" x="40" y="110" as="geometry" />
         </mxCell>
-        <mxCell id="Fac_r0" value="id (PK)" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" vertex="1" parent="Fac">
-          <mxGeometry y="26" width="200" height="22" as="geometry" />
+        <mxCell id="Fac_r0" parent="Fac" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" value="id (PK)" vertex="1">
+          <mxGeometry height="22" width="220" y="26" as="geometry" />
         </mxCell>
-        <mxCell id="Fac_r1" value="pinHash" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" vertex="1" parent="Fac">
-          <mxGeometry y="48" width="200" height="22" as="geometry" />
+        <mxCell id="Fac_r1" parent="Fac" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" value="displayName" vertex="1">
+          <mxGeometry height="22" width="220" y="48" as="geometry" />
         </mxCell>
-        <mxCell id="Fac_r2" value="label" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" vertex="1" parent="Fac">
-          <mxGeometry y="70" width="200" height="22" as="geometry" />
+        <mxCell id="Fac_r2" parent="Fac" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" value="credentialHash (SR-01)" vertex="1">
+          <mxGeometry height="22" width="220" y="70" as="geometry" />
         </mxCell>
-        <mxCell id="Ses" value="Session" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;fillColor=#dae8fc;strokeColor=#6c8ebf;html=1;" vertex="1" parent="1">
-          <mxGeometry x="340" y="110" width="220" height="114" as="geometry" />
+        <mxCell id="Act" parent="1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;fillColor=#dae8fc;strokeColor=#6c8ebf;html=1;" value="Activity" vertex="1">
+          <mxGeometry height="158" width="240" x="460" y="212" as="geometry" />
         </mxCell>
-        <mxCell id="Ses_r0" value="id (PK)" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" vertex="1" parent="Ses">
-          <mxGeometry y="26" width="220" height="22" as="geometry" />
+        <mxCell id="Act_r0" parent="Act" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" value="id (PK)" vertex="1">
+          <mxGeometry height="22" width="240" y="26" as="geometry" />
         </mxCell>
-        <mxCell id="Ses_r1" value="title" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" vertex="1" parent="Ses">
-          <mxGeometry y="48" width="220" height="22" as="geometry" />
+        <mxCell id="Act_r1" parent="Act" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" value="title" vertex="1">
+          <mxGeometry height="22" width="240" y="48" as="geometry" />
         </mxCell>
-        <mxCell id="Ses_r2" value="startTime" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" vertex="1" parent="Ses">
-          <mxGeometry y="70" width="220" height="22" as="geometry" />
+        <mxCell id="Act_r2" parent="Act" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" value="level" vertex="1">
+          <mxGeometry height="22" width="240" y="70" as="geometry" />
         </mxCell>
-        <mxCell id="Ses_r3" value="facilitatorId (FK)" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" vertex="1" parent="Ses">
-          <mxGeometry y="92" width="220" height="22" as="geometry" />
+        <mxCell id="Act_r3" parent="Act" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" value="durationMin" vertex="1">
+          <mxGeometry height="22" width="240" y="92" as="geometry" />
         </mxCell>
-        <mxCell id="Lea" value="Learner" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;fillColor=#dae8fc;strokeColor=#6c8ebf;html=1;" vertex="1" parent="1">
-          <mxGeometry x="660" y="110" width="230" height="92" as="geometry" />
+        <mxCell id="Act_r4" parent="Act" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" value="topic" vertex="1">
+          <mxGeometry height="22" width="240" y="114" as="geometry" />
         </mxCell>
-        <mxCell id="Lea_r0" value="id (PK)" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" vertex="1" parent="Lea">
-          <mxGeometry y="26" width="230" height="22" as="geometry" />
+        <mxCell id="Act_r5" parent="Act" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" value="materials" vertex="1">
+          <mxGeometry height="22" width="240" y="136" as="geometry" />
         </mxCell>
-        <mxCell id="Lea_r1" value="sessionId (FK)" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" vertex="1" parent="Lea">
-          <mxGeometry y="48" width="230" height="22" as="geometry" />
+        <mxCell id="Sav" parent="1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;fillColor=#dae8fc;strokeColor=#6c8ebf;html=1;" value="SavedActivity" vertex="1">
+          <mxGeometry height="92" width="240" x="950" y="110" as="geometry" />
         </mxCell>
-        <mxCell id="Lea_r2" value="label (anonymous)" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" vertex="1" parent="Lea">
-          <mxGeometry y="70" width="230" height="22" as="geometry" />
+        <mxCell id="Sav_r0" parent="Sav" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" value="facilitatorId (FK)" vertex="1">
+          <mxGeometry height="22" width="240" y="26" as="geometry" />
         </mxCell>
-        <mxCell id="Rec" value="AttendanceRecord" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;fillColor=#dae8fc;strokeColor=#6c8ebf;html=1;" vertex="1" parent="1">
-          <mxGeometry x="340" y="330" width="260" height="136" as="geometry" />
+        <mxCell id="Sav_r1" parent="Sav" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" value="activityId (FK)" vertex="1">
+          <mxGeometry height="22" width="240" y="48" as="geometry" />
         </mxCell>
-        <mxCell id="Rec_r0" value="recordId (PK, made on the phone)" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" vertex="1" parent="Rec">
-          <mxGeometry y="26" width="260" height="22" as="geometry" />
+        <mxCell id="Sav_r2" parent="Sav" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" value="savedAt" vertex="1">
+          <mxGeometry height="22" width="240" y="70" as="geometry" />
         </mxCell>
-        <mxCell id="Rec_r1" value="sessionId (FK)" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" vertex="1" parent="Rec">
-          <mxGeometry y="48" width="260" height="22" as="geometry" />
+        <mxCell id="Pln" parent="1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;fillColor=#dae8fc;strokeColor=#6c8ebf;html=1;" value="SessionPlan" vertex="1">
+          <mxGeometry height="180" width="290" x="440" y="610" as="geometry" />
         </mxCell>
-        <mxCell id="Rec_r2" value="sessionDate" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" vertex="1" parent="Rec">
-          <mxGeometry y="70" width="260" height="22" as="geometry" />
+        <mxCell id="Pln_r0" parent="Pln" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" value="planId (PK, made on the phone)" vertex="1">
+          <mxGeometry height="22" width="290" y="26" as="geometry" />
         </mxCell>
-        <mxCell id="Rec_r3" value="recordedAt" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" vertex="1" parent="Rec">
-          <mxGeometry y="92" width="260" height="22" as="geometry" />
+        <mxCell id="Pln_r1" parent="Pln" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" value="facilitatorId (FK; owner, SR-01)" vertex="1">
+          <mxGeometry height="22" width="290" y="48" as="geometry" />
         </mxCell>
-        <mxCell id="Rec_r4" value="supersededBy" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" vertex="1" parent="Rec">
-          <mxGeometry y="114" width="260" height="22" as="geometry" />
+        <mxCell id="Pln_r2" parent="Pln" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" value="activityId (FK)" vertex="1">
+          <mxGeometry height="22" width="290" y="70" as="geometry" />
         </mxCell>
-        <mxCell id="Mar" value="AttendanceMark" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;fillColor=#dae8fc;strokeColor=#6c8ebf;html=1;" vertex="1" parent="1">
-          <mxGeometry x="700" y="330" width="260" height="92" as="geometry" />
+        <mxCell id="Pln_r3" parent="Pln" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" value="title" vertex="1">
+          <mxGeometry height="22" width="290" y="92" as="geometry" />
         </mxCell>
-        <mxCell id="Mar_r0" value="recordId (FK)" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" vertex="1" parent="Mar">
-          <mxGeometry y="26" width="260" height="22" as="geometry" />
+        <mxCell id="Pln_r4" parent="Pln" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" value="safetyNotes" vertex="1">
+          <mxGeometry height="22" width="290" y="114" as="geometry" />
         </mxCell>
-        <mxCell id="Mar_r1" value="learnerId (FK)" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" vertex="1" parent="Mar">
-          <mxGeometry y="48" width="260" height="22" as="geometry" />
+        <mxCell id="Pln_r5" parent="Pln" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" value="inclusionPrompts" vertex="1">
+          <mxGeometry height="22" width="290" y="136" as="geometry" />
         </mxCell>
-        <mxCell id="Mar_r2" value="status: present / absent / unmarked" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" vertex="1" parent="Mar">
-          <mxGeometry y="70" width="260" height="22" as="geometry" />
+        <mxCell id="Pln_r6" parent="Pln" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" value="updatedAt" vertex="1">
+          <mxGeometry height="22" width="290" y="158" as="geometry" />
         </mxCell>
-        <mxCell id="Que" value="SyncQueueItem (phone only)" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;fillColor=#dae8fc;strokeColor=#6c8ebf;html=1;dashed=1;" vertex="1" parent="1">
-          <mxGeometry x="40" y="330" width="230" height="114" as="geometry" />
+        <mxCell id="Stp" parent="1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;fillColor=#dae8fc;strokeColor=#6c8ebf;html=1;" value="PlanStep" vertex="1">
+          <mxGeometry height="136" width="260" x="1080" y="370" as="geometry" />
         </mxCell>
-        <mxCell id="Que_r0" value="recordId (FK)" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" vertex="1" parent="Que">
-          <mxGeometry y="26" width="230" height="22" as="geometry" />
+        <mxCell id="Stp_r0" parent="Stp" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" value="planId (FK)" vertex="1">
+          <mxGeometry height="22" width="260" y="26" as="geometry" />
         </mxCell>
-        <mxCell id="Que_r1" value="state: Pending/Failed/Synced" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" vertex="1" parent="Que">
-          <mxGeometry y="48" width="230" height="22" as="geometry" />
+        <mxCell id="Stp_r1" parent="Stp" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" value="position" vertex="1">
+          <mxGeometry height="22" width="260" y="48" as="geometry" />
         </mxCell>
-        <mxCell id="Que_r2" value="retryCount" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" vertex="1" parent="Que">
-          <mxGeometry y="70" width="230" height="22" as="geometry" />
+        <mxCell id="Stp_r2" parent="Stp" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" value="description" vertex="1">
+          <mxGeometry height="22" width="260" y="70" as="geometry" />
         </mxCell>
-        <mxCell id="Que_r3" value="lastError" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" vertex="1" parent="Que">
-          <mxGeometry y="92" width="230" height="22" as="geometry" />
+        <mxCell id="Stp_r3" parent="Stp" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" value="minutes" vertex="1">
+          <mxGeometry height="22" width="260" y="92" as="geometry" />
         </mxCell>
-        <mxCell id="e3" value="runs" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;startArrow=ERmandOne;endArrow=ERzeroToMany;endFill=0;startFill=0;" edge="1" parent="1" source="Fac" target="Ses">
+        <mxCell id="Stp_r4" parent="Stp" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" value="materials" vertex="1">
+          <mxGeometry height="22" width="260" y="114" as="geometry" />
+        </mxCell>
+        <mxCell id="Que" parent="1" style="swimlane;fontStyle=1;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;fillColor=#dae8fc;strokeColor=#6c8ebf;html=1;dashed=1;" value="SyncQueueItem (phone only)" vertex="1">
+          <mxGeometry height="114" width="260" y="352" as="geometry" />
+        </mxCell>
+        <mxCell id="Que_r0" parent="Que" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" value="planId (FK)" vertex="1">
+          <mxGeometry height="22" width="260" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="Que_r1" parent="Que" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" value="state: Pending / Failed / Synced (FR-05)" vertex="1">
+          <mxGeometry height="22" width="260" y="48" as="geometry" />
+        </mxCell>
+        <mxCell id="Que_r2" parent="Que" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" value="retryCount" vertex="1">
+          <mxGeometry height="22" width="260" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="Que_r3" parent="Que" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;fontFamily=Courier New;html=1;" value="lastError" vertex="1">
+          <mxGeometry height="22" width="260" y="92" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="Fac" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;startArrow=ERmandOne;endArrow=ERzeroToMany;endFill=0;startFill=0;" target="Sav" value="saves">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e4" value="has" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;startArrow=ERmandOne;endArrow=ERzeroToMany;endFill=0;startFill=0;" edge="1" parent="1" source="Ses" target="Lea">
+        <mxCell id="e4" edge="1" parent="1" source="Act" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;startArrow=ERmandOne;endArrow=ERzeroToMany;endFill=0;startFill=0;" target="Sav" value="saved as">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e5" value="has" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;startArrow=ERmandOne;endArrow=ERzeroToMany;endFill=0;startFill=0;" edge="1" parent="1" source="Ses" target="Rec">
+        <mxCell id="e5" edge="1" parent="1" source="Fac_r2" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;startArrow=ERmandOne;endArrow=ERzeroToMany;endFill=0;startFill=0;libavoidRouting=1;exitX=0.825;exitY=1.296;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="Pln_r0" value="owns">
+          <mxGeometry relative="1" x="0.0522" as="geometry">
+            <Array as="points">
+              <mxPoint x="222" y="277" />
+              <mxPoint x="350" y="277" />
+              <mxPoint x="350" y="647" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="Act" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;startArrow=ERmandOne;endArrow=ERzeroToMany;endFill=0;startFill=0;" target="Pln" value="based on">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e6" value="contains" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;startArrow=ERmandOne;endArrow=ERoneToMany;endFill=0;startFill=0;" edge="1" parent="1" source="Rec" target="Mar">
+        <mxCell id="e7" edge="1" parent="1" source="Pln" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;startArrow=ERmandOne;endArrow=ERoneToMany;endFill=0;startFill=0;" target="Stp" value="contains">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e7" value="marked in" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;startArrow=ERmandOne;endArrow=ERzeroToMany;endFill=0;startFill=0;" edge="1" parent="1" source="Lea" target="Mar">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="e8" value="queued as" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;startArrow=ERmandOne;endArrow=ERzeroToOne;endFill=0;startFill=0;" edge="1" parent="1" source="Rec" target="Que">
+        <mxCell id="e8" edge="1" parent="1" source="Pln" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeWidth=2;fontSize=12;labelBackgroundColor=#ffffff;startArrow=ERmandOne;endArrow=ERzeroToOne;endFill=0;startFill=0;" target="Que" value="queued as">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="p4" name="5 Sequence - Save Attendance">
+  <diagram id="p4" name="5 Sequence - Create and Sync Plan">
     <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="title" value="5. Sequence: save attendance (UML)" style="text;html=1;fontSize=20;fontStyle=1;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="title" value="5. Sequence: create a plan, autosave and sync (UML)" style="text;html=1;fontSize=20;fontStyle=1;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="20" y="10" width="900" height="34" as="geometry" />
         </mxCell>
-        <mxCell id="sub" value="Purpose: show the order of messages, including offline and failure paths.   Serves: FR-06, FR-07, FR-08, QR-03, QR-06.   Dashed = reply or network response." style="text;html=1;fontSize=12;align=left;verticalAlign=top;whiteSpace=wrap;fontColor=#555555;" vertex="1" parent="1">
+        <mxCell id="sub" value="Purpose: 15-message plan-save/sync sequence with offline and failure paths. Serves: FR-04, FR-05, SR-01, QR-01, QR-02, AR-01. Dashed = reply/network response." style="text;html=1;fontSize=12;align=left;verticalAlign=top;whiteSpace=wrap;fontColor=#555555;" vertex="1" parent="1">
           <mxGeometry x="20" y="44" width="900" height="24" as="geometry" />
         </mxCell>
         <mxCell id="LFacilitator" value="Facilitator" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="40" y="90" width="120" height="500" as="geometry" />
+          <mxGeometry x="40" y="90" width="120" height="640" as="geometry" />
         </mxCell>
         <mxCell id="LScreens" value="Screens" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="230" y="90" width="120" height="500" as="geometry" />
+          <mxGeometry x="230" y="90" width="120" height="640" as="geometry" />
         </mxCell>
-        <mxCell id="LAttendancelogic" value="Attendance logic" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="420" y="90" width="120" height="500" as="geometry" />
+        <mxCell id="LPlanlogic" value="Plan logic" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="420" y="90" width="120" height="640" as="geometry" />
         </mxCell>
         <mxCell id="LLocalstore" value="Local store" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="610" y="90" width="120" height="500" as="geometry" />
+          <mxGeometry x="610" y="90" width="120" height="640" as="geometry" />
         </mxCell>
         <mxCell id="LSyncmanager" value="Sync manager" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="800" y="90" width="120" height="500" as="geometry" />
+          <mxGeometry x="800" y="90" width="120" height="640" as="geometry" />
         </mxCell>
         <mxCell id="LAPI" value="API" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="990" y="90" width="120" height="500" as="geometry" />
+          <mxGeometry x="990" y="90" width="120" height="640" as="geometry" />
         </mxCell>
         <mxCell id="LDatabase" value="Database" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="1180" y="90" width="120" height="500" as="geometry" />
+          <mxGeometry x="1180" y="90" width="120" height="640" as="geometry" />
         </mxCell>
-        <mxCell id="m3" value="1. mark learners, tap Save" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+        <mxCell id="m3" value="1. open saved activity, edit plan" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="100" y="170" as="sourcePoint" />
             <mxPoint x="290" y="170" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m4" value="2. validate (FR-07)" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+        <mxCell id="m4" value="2. change text" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="290" y="206" as="sourcePoint" />
-            <mxPoint x="480" y="206" as="targetPoint" />
+            <mxPoint x="290" y="204" as="sourcePoint" />
+            <mxPoint x="480" y="204" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m5" value="3. write record (Pending)" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+        <mxCell id="m5" value="3. autosave draft locally (FR-04)" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="480" y="242" as="sourcePoint" />
-            <mxPoint x="670" y="242" as="targetPoint" />
+            <mxPoint x="480" y="238" as="sourcePoint" />
+            <mxPoint x="670" y="238" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m6" value="4. &quot;Saved on this device&quot;" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;fontSize=12;labelBackgroundColor=#ffffff;dashed=1;endArrow=open;" edge="1" parent="1">
+        <mxCell id="m6" value="4. &quot;Draft saved&quot;" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;fontSize=12;labelBackgroundColor=#ffffff;dashed=1;endArrow=open;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="670" y="278" as="sourcePoint" />
-            <mxPoint x="290" y="278" as="targetPoint" />
+            <mxPoint x="670" y="272" as="sourcePoint" />
+            <mxPoint x="290" y="272" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m7" value="5. flush outbox" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+        <mxCell id="m7" value="5. tap Save plan" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="480" y="314" as="sourcePoint" />
-            <mxPoint x="860" y="314" as="targetPoint" />
+            <mxPoint x="100" y="306" as="sourcePoint" />
+            <mxPoint x="290" y="306" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m8" value="6. POST record + recordId" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;fontSize=12;labelBackgroundColor=#ffffff;dashed=1;endArrow=open;" edge="1" parent="1">
+        <mxCell id="m8" value="6. validate required plan fields (FR-04)" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="860" y="350" as="sourcePoint" />
-            <mxPoint x="1050" y="350" as="targetPoint" />
+            <mxPoint x="290" y="340" as="sourcePoint" />
+            <mxPoint x="480" y="340" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m9" value="7. validate, store once" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+        <mxCell id="m9" value="7. write plan + outbox item (Pending)" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1050" y="386" as="sourcePoint" />
-            <mxPoint x="1240" y="386" as="targetPoint" />
+            <mxPoint x="480" y="374" as="sourcePoint" />
+            <mxPoint x="670" y="374" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m10" value="8. stored" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;fontSize=12;labelBackgroundColor=#ffffff;dashed=1;endArrow=open;" edge="1" parent="1">
+        <mxCell id="m10" value="8. &quot;Saved on this device&quot;" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;fontSize=12;labelBackgroundColor=#ffffff;dashed=1;endArrow=open;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1240" y="422" as="sourcePoint" />
-            <mxPoint x="1050" y="422" as="targetPoint" />
+            <mxPoint x="670" y="408" as="sourcePoint" />
+            <mxPoint x="290" y="408" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m11" value="9. 201 created / 200 duplicate" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;fontSize=12;labelBackgroundColor=#ffffff;dashed=1;endArrow=open;" edge="1" parent="1">
+        <mxCell id="m11" value="9. flush outbox" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1050" y="458" as="sourcePoint" />
-            <mxPoint x="860" y="458" as="targetPoint" />
+            <mxPoint x="480" y="442" as="sourcePoint" />
+            <mxPoint x="860" y="442" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m12" value="10. mark Synced, remove" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+        <mxCell id="m12" value="10. POST plan + planId" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;fontSize=12;labelBackgroundColor=#ffffff;dashed=1;endArrow=open;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="860" y="494" as="sourcePoint" />
-            <mxPoint x="670" y="494" as="targetPoint" />
+            <mxPoint x="860" y="476" as="sourcePoint" />
+            <mxPoint x="1050" y="476" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="m13" value="11. &quot;Saved and synced&quot;" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;fontSize=12;labelBackgroundColor=#ffffff;dashed=1;endArrow=open;" edge="1" parent="1">
+        <mxCell id="m13" value="11. validate and store once (FR-05)" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="860" y="530" as="sourcePoint" />
-            <mxPoint x="290" y="530" as="targetPoint" />
+            <mxPoint x="1050" y="510" as="sourcePoint" />
+            <mxPoint x="1240" y="510" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="alt" value="Branches (draw as UML alt boxes):&#xa;• Invalid input at step 2: error shown, nothing written.&#xa;• Offline at step 6: record stays Pending and retries later.&#xa;• Server rejects (4xx): record marked Failed with the reason, never deleted." style="shape=note;fillColor=#fff2cc;strokeColor=#d6b656;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="100" y="640" width="820" height="100" as="geometry" />
+        <mxCell id="m14" value="12. stored" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;fontSize=12;labelBackgroundColor=#ffffff;dashed=1;endArrow=open;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1240" y="544" as="sourcePoint" />
+            <mxPoint x="1050" y="544" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m15" value="13. 201 created / 200 duplicate" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;fontSize=12;labelBackgroundColor=#ffffff;dashed=1;endArrow=open;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1050" y="578" as="sourcePoint" />
+            <mxPoint x="860" y="578" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m16" value="14. mark Synced" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="860" y="612" as="sourcePoint" />
+            <mxPoint x="670" y="612" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m17" value="15. show Synced / Pending / Failed (FR-05)" style="html=1;verticalAlign=bottom;endArrow=block;endFill=1;fontSize=12;labelBackgroundColor=#ffffff;dashed=1;endArrow=open;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="860" y="646" as="sourcePoint" />
+            <mxPoint x="290" y="646" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="alt" value="Failure branches (shown as UML alt boxes):&#xa;• Invalid plan: show an understandable error; do not queue invalid data.&#xa;• Offline: retain local draft; status Pending; retry when online (FR-05).&#xa;• Server rejects (4xx): show reason; retain local copy; allow correction/retry.&#xa;• Same plan edited on two devices: show Keep Local / Keep Remote / Merge; facilitator chooses; never silently overwrite the local draft.&#xa;• Storage full: show save-failed cause and recovery options; do not claim a save succeeded." style="shape=note;fillColor=#fff2cc;strokeColor=#d6b656;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="100" y="740" width="820" height="100" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="p5" name="6 Access Rules">
-    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+    <mxGraphModel dx="1270" dy="670" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="title" value="6. Roles and access rules" style="text;html=1;fontSize=20;fontStyle=1;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="10" width="900" height="34" as="geometry" />
+        <mxCell id="title" parent="1" style="text;html=1;fontSize=20;fontStyle=1;align=left;verticalAlign=top;whiteSpace=wrap;" value="6. Roles and access rules" vertex="1">
+          <mxGeometry height="34" width="900" x="20" y="10" as="geometry" />
         </mxCell>
-        <mxCell id="sub" value="Purpose: who may do what.   Serves: QR-04 (privacy), QR-07 (integrity).   Enforce on the server: the signed-in facilitator must own the session." style="text;html=1;fontSize=12;align=left;verticalAlign=top;whiteSpace=wrap;fontColor=#555555;" vertex="1" parent="1">
-          <mxGeometry x="20" y="44" width="900" height="24" as="geometry" />
+        <mxCell id="sub" parent="1" style="text;html=1;fontSize=12;align=left;verticalAlign=top;whiteSpace=wrap;fontColor=#555555;" value="Purpose: access boundaries for shared devices. Serves: PR-01 (no pupil data), SR-01 (authentication, encryption and profile separation), QR-01, QR-02. Server and local workspace must enforce ownership." vertex="1">
+          <mxGeometry height="24" width="900" x="20" y="44" as="geometry" />
         </mxCell>
-        <mxCell id="t0_0" value="Action" style="fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="40" y="100" width="330" height="44" as="geometry" />
+        <mxCell id="t0_0" parent="1" style="fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Action" vertex="1">
+          <mxGeometry height="44" width="330" x="40" y="100" as="geometry" />
         </mxCell>
-        <mxCell id="t0_1" value="Facilitator" style="fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="370" y="100" width="160" height="44" as="geometry" />
+        <mxCell id="t0_1" parent="1" style="fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Facilitator (owner)" vertex="1">
+          <mxGeometry height="44" width="190" x="370" y="100" as="geometry" />
         </mxCell>
-        <mxCell id="t0_2" value="Administrator" style="fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="530" y="100" width="160" height="44" as="geometry" />
+        <mxCell id="t0_2" parent="1" style="fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Other facilitator" vertex="1">
+          <mxGeometry height="44" width="190" x="560" y="100" as="geometry" />
         </mxCell>
-        <mxCell id="t0_3" value="Anyone else" style="fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="690" y="100" width="160" height="44" as="geometry" />
+        <mxCell id="t0_3" parent="1" style="fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Anyone not signed in" vertex="1">
+          <mxGeometry height="44" width="190" x="750" y="100" as="geometry" />
         </mxCell>
-        <mxCell id="t1_0" value="Sign in with ID and PIN" style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="40" y="144" width="330" height="44" as="geometry" />
+        <mxCell id="t1_0" parent="1" style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Sign in to own workspace" vertex="1">
+          <mxGeometry height="44" width="330" x="40" y="144" as="geometry" />
         </mxCell>
-        <mxCell id="t1_1" value="Yes" style="fillColor=#d5e8d4;strokeColor=#82b366;align=center;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="370" y="144" width="160" height="44" as="geometry" />
+        <mxCell id="t1_1" parent="1" style="fillColor=#d5e8d4;strokeColor=#82b366;align=center;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Yes" vertex="1">
+          <mxGeometry height="44" width="190" x="370" y="144" as="geometry" />
         </mxCell>
-        <mxCell id="t1_2" value="Yes" style="fillColor=#d5e8d4;strokeColor=#82b366;align=center;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="530" y="144" width="160" height="44" as="geometry" />
+        <mxCell id="t1_2" parent="1" style="fillColor=#d5e8d4;strokeColor=#82b366;align=center;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Own only" vertex="1">
+          <mxGeometry height="44" width="190" x="560" y="144" as="geometry" />
         </mxCell>
-        <mxCell id="t1_3" value="No" style="fillColor=#f8cecc;strokeColor=#b85450;align=center;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="690" y="144" width="160" height="44" as="geometry" />
+        <mxCell id="t1_3" parent="1" style="fillColor=#f8cecc;strokeColor=#b85450;align=center;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="No" vertex="1">
+          <mxGeometry height="44" width="190" x="750" y="144" as="geometry" />
         </mxCell>
-        <mxCell id="t2_0" value="Record attendance for own session" style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="40" y="188" width="330" height="44" as="geometry" />
+        <mxCell id="t2_0" parent="1" style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Save activities for offline use" vertex="1">
+          <mxGeometry height="44" width="330" x="40" y="188" as="geometry" />
         </mxCell>
-        <mxCell id="t2_1" value="Yes" style="fillColor=#d5e8d4;strokeColor=#82b366;align=center;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="370" y="188" width="160" height="44" as="geometry" />
+        <mxCell id="t2_1" parent="1" style="fillColor=#d5e8d4;strokeColor=#82b366;align=center;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Yes" vertex="1">
+          <mxGeometry height="44" width="190" x="370" y="188" as="geometry" />
         </mxCell>
-        <mxCell id="t2_2" value="No" style="fillColor=#f8cecc;strokeColor=#b85450;align=center;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="530" y="188" width="160" height="44" as="geometry" />
+        <mxCell id="t2_2" parent="1" style="fillColor=#d5e8d4;strokeColor=#82b366;align=center;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Own only" vertex="1">
+          <mxGeometry height="44" width="190" x="560" y="188" as="geometry" />
         </mxCell>
-        <mxCell id="t2_3" value="No" style="fillColor=#f8cecc;strokeColor=#b85450;align=center;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="690" y="188" width="160" height="44" as="geometry" />
+        <mxCell id="t2_3" parent="1" style="fillColor=#f8cecc;strokeColor=#b85450;align=center;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="No" vertex="1">
+          <mxGeometry height="44" width="190" x="750" y="188" as="geometry" />
         </mxCell>
-        <mxCell id="t3_0" value="Read own attendance" style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="40" y="232" width="330" height="44" as="geometry" />
+        <mxCell id="t3_0" parent="1" style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Create, edit, delete own plan" vertex="1">
+          <mxGeometry height="44" width="330" x="40" y="232" as="geometry" />
         </mxCell>
-        <mxCell id="t3_1" value="Yes" style="fillColor=#d5e8d4;strokeColor=#82b366;align=center;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="370" y="232" width="160" height="44" as="geometry" />
+        <mxCell id="t3_1" parent="1" style="fillColor=#d5e8d4;strokeColor=#82b366;align=center;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Yes" vertex="1">
+          <mxGeometry height="44" width="190" x="370" y="232" as="geometry" />
         </mxCell>
-        <mxCell id="t3_2" value="No" style="fillColor=#f8cecc;strokeColor=#b85450;align=center;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="530" y="232" width="160" height="44" as="geometry" />
+        <mxCell id="t3_2" parent="1" style="fillColor=#f8cecc;strokeColor=#b85450;align=center;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="No" vertex="1">
+          <mxGeometry height="44" width="190" x="560" y="232" as="geometry" />
         </mxCell>
-        <mxCell id="t3_3" value="No" style="fillColor=#f8cecc;strokeColor=#b85450;align=center;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="690" y="232" width="160" height="44" as="geometry" />
+        <mxCell id="t3_3" parent="1" style="fillColor=#f8cecc;strokeColor=#b85450;align=center;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="No" vertex="1">
+          <mxGeometry height="44" width="190" x="750" y="232" as="geometry" />
         </mxCell>
-        <mxCell id="t4_0" value="Another facilitator&#39;s session" style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="40" y="276" width="330" height="44" as="geometry" />
+        <mxCell id="t4_0" parent="1" style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Open another facilitator&#39;s draft" vertex="1">
+          <mxGeometry height="44" width="330" x="40" y="276" as="geometry" />
         </mxCell>
-        <mxCell id="t4_1" value="No" style="fillColor=#f8cecc;strokeColor=#b85450;align=center;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="370" y="276" width="160" height="44" as="geometry" />
+        <mxCell id="t4_1" parent="1" style="fillColor=#f8cecc;strokeColor=#b85450;align=center;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="No" vertex="1">
+          <mxGeometry height="44" width="190" x="370" y="276" as="geometry" />
         </mxCell>
-        <mxCell id="t4_2" value="No" style="fillColor=#f8cecc;strokeColor=#b85450;align=center;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="530" y="276" width="160" height="44" as="geometry" />
+        <mxCell id="t4_2" parent="1" style="fillColor=#f8cecc;strokeColor=#b85450;align=center;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="No" vertex="1">
+          <mxGeometry height="44" width="190" x="560" y="276" as="geometry" />
         </mxCell>
-        <mxCell id="t4_3" value="No" style="fillColor=#f8cecc;strokeColor=#b85450;align=center;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="690" y="276" width="160" height="44" as="geometry" />
+        <mxCell id="t4_3" parent="1" style="fillColor=#f8cecc;strokeColor=#b85450;align=center;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="No" vertex="1">
+          <mxGeometry height="44" width="190" x="750" y="276" as="geometry" />
         </mxCell>
-        <mxCell id="t5_0" value="Export or back up all data" style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="40" y="320" width="330" height="44" as="geometry" />
+        <mxCell id="t5_0" parent="1" style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Sync own plans" vertex="1">
+          <mxGeometry height="44" width="330" x="40" y="320" as="geometry" />
         </mxCell>
-        <mxCell id="t5_1" value="No" style="fillColor=#f8cecc;strokeColor=#b85450;align=center;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="370" y="320" width="160" height="44" as="geometry" />
+        <mxCell id="t5_1" parent="1" style="fillColor=#d5e8d4;strokeColor=#82b366;align=center;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Yes" vertex="1">
+          <mxGeometry height="44" width="190" x="370" y="320" as="geometry" />
         </mxCell>
-        <mxCell id="t5_2" value="Yes" style="fillColor=#d5e8d4;strokeColor=#82b366;align=center;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="530" y="320" width="160" height="44" as="geometry" />
+        <mxCell id="t5_2" parent="1" style="fillColor=#d5e8d4;strokeColor=#82b366;align=center;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Own only" vertex="1">
+          <mxGeometry height="44" width="190" x="560" y="320" as="geometry" />
         </mxCell>
-        <mxCell id="t5_3" value="No" style="fillColor=#f8cecc;strokeColor=#b85450;align=center;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="690" y="320" width="160" height="44" as="geometry" />
+        <mxCell id="t5_3" parent="1" style="fillColor=#f8cecc;strokeColor=#b85450;align=center;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="No" vertex="1">
+          <mxGeometry height="44" width="190" x="750" y="320" as="geometry" />
         </mxCell>
-        <mxCell id="sec" value="Controls: PINs stored only as hashes; lock after 5 wrong PINs; sign-out clears local access; no keys in source code." style="shape=note;fillColor=#fff2cc;strokeColor=#d6b656;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="40" y="400" width="810" height="50" as="geometry" />
+        <mxCell id="sec" parent="1" style="shape=note;fillColor=#fff2cc;strokeColor=#d6b656;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Controls: authenticate facilitator; encrypt local plans and data in transit/at rest as required by SR-01; sign-out locks the workspace; another profile cannot view saved data without signing in; no pupil data (PR-01); no keys in source code.&amp;nbsp;" vertex="1">
+          <mxGeometry height="60" width="860" x="40" y="400" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="p6" name="7 Offline and Failure">
-    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+    <mxGraphModel dx="1270" dy="670" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="title" value="7. Offline, synchronisation and failure strategy" style="text;html=1;fontSize=20;fontStyle=1;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="10" width="900" height="34" as="geometry" />
+        <mxCell id="title" parent="1" style="text;html=1;fontSize=20;fontStyle=1;align=left;verticalAlign=top;whiteSpace=wrap;" value="7. Offline, synchronisation and failure strategy" vertex="1">
+          <mxGeometry height="34" width="900" x="20" y="10" as="geometry" />
         </mxCell>
-        <mxCell id="sub" value="Purpose: define behaviour when things go wrong.   Serves: FR-04, FR-08, QR-03, QR-06." style="text;html=1;fontSize=12;align=left;verticalAlign=top;whiteSpace=wrap;fontColor=#555555;" vertex="1" parent="1">
-          <mxGeometry x="20" y="44" width="900" height="24" as="geometry" />
+        <mxCell id="sub" parent="1" style="text;html=1;fontSize=12;align=left;verticalAlign=top;whiteSpace=wrap;fontColor=#555555;" value="Purpose: behaviour during offline use, sync failures and recovery. Serves: FR-03, FR-04, FR-05, QR-02, PR-01, SR-01, AR-01." vertex="1">
+          <mxGeometry height="24" width="900" x="20" y="44" as="geometry" />
         </mxCell>
-        <mxCell id="o0_0" value="Situation" style="fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="40" y="100" width="340" height="50" as="geometry" />
+        <mxCell id="o0_0" parent="1" style="fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Situation" vertex="1">
+          <mxGeometry height="52" width="340" x="40" y="100" as="geometry" />
         </mxCell>
-        <mxCell id="o0_1" value="What happens" style="fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="380" y="100" width="560" height="50" as="geometry" />
+        <mxCell id="o0_1" parent="1" style="fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="What happens" vertex="1">
+          <mxGeometry height="52" width="600" x="380" y="100" as="geometry" />
         </mxCell>
-        <mxCell id="o1_0" value="No internet when saving" style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="40" y="150" width="340" height="50" as="geometry" />
+        <mxCell id="o1_0" parent="1" style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="No internet when saving" vertex="1">
+          <mxGeometry height="52" width="340" x="40" y="152" as="geometry" />
         </mxCell>
-        <mxCell id="o1_1" value="Saved on the phone, shown as Pending, sent automatically later." style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="380" y="150" width="560" height="50" as="geometry" />
+        <mxCell id="o1_1" parent="1" style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Plan saved on device, shown as Pending, automatically sent later (FR-05)." vertex="1">
+          <mxGeometry height="52" width="600" x="380" y="152" as="geometry" />
         </mxCell>
-        <mxCell id="o2_0" value="Response lost after the server saved" style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="40" y="200" width="340" height="50" as="geometry" />
+        <mxCell id="o2_0" parent="1" style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Response lost after the server saved" vertex="1">
+          <mxGeometry height="52" width="340" x="40" y="204" as="geometry" />
         </mxCell>
-        <mxCell id="o2_1" value="Retry reuses the same recordId; the server answers &quot;duplicate&quot;. No double count." style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="380" y="200" width="560" height="50" as="geometry" />
+        <mxCell id="o2_1" parent="1" style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Retry reuses the same planId; server recognises duplicate and avoids a second copy. Verify with a test." vertex="1">
+          <mxGeometry height="52" width="600" x="380" y="204" as="geometry" />
         </mxCell>
-        <mxCell id="o3_0" value="Server down or restarting" style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="40" y="250" width="340" height="50" as="geometry" />
+        <mxCell id="o3_0" parent="1" style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Server down or restarting" vertex="1">
+          <mxGeometry height="52" width="340" x="40" y="256" as="geometry" />
         </mxCell>
-        <mxCell id="o3_1" value="Record stays Pending and retries. Nothing is deleted." style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="380" y="250" width="560" height="50" as="geometry" />
+        <mxCell id="o3_1" parent="1" style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Plan stays Pending and retries. Nothing is deleted." vertex="1">
+          <mxGeometry height="52" width="600" x="380" y="256" as="geometry" />
         </mxCell>
-        <mxCell id="o4_0" value="Server rejects the data" style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="40" y="300" width="340" height="50" as="geometry" />
+        <mxCell id="o4_0" parent="1" style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Server rejects the data" vertex="1">
+          <mxGeometry height="52" width="340" x="40" y="308" as="geometry" />
         </mxCell>
-        <mxCell id="o4_1" value="Record shown as Failed with the reason. Facilitator can fix and retry." style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="380" y="300" width="560" height="50" as="geometry" />
+        <mxCell id="o4_1" parent="1" style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Plan shown as Failed with the reason. Local copy kept; facilitator can fix and retry." vertex="1">
+          <mxGeometry height="52" width="600" x="380" y="308" as="geometry" />
         </mxCell>
-        <mxCell id="o5_0" value="App closed or battery dies mid-marking" style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="40" y="350" width="340" height="50" as="geometry" />
+        <mxCell id="o5_0" parent="1" style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="App closed or battery dies mid-edit" vertex="1">
+          <mxGeometry height="52" width="340" x="40" y="360" as="geometry" />
         </mxCell>
-        <mxCell id="o5_1" value="The draft is restored when the roster is reopened." style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="380" y="350" width="560" height="50" as="geometry" />
+        <mxCell id="o5_1" parent="1" style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Restore the last locally autosaved draft when reopened (FR-04)." vertex="1">
+          <mxGeometry height="52" width="600" x="380" y="360" as="geometry" />
         </mxCell>
-        <mxCell id="o6_0" value="Two phones save the same session and date" style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="40" y="400" width="340" height="50" as="geometry" />
+        <mxCell id="o6_0" parent="1" style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Same plan edited on two devices" vertex="1">
+          <mxGeometry height="52" width="340" x="40" y="412" as="geometry" />
         </mxCell>
-        <mxCell id="o6_1" value="The later recordedAt wins; the older record is kept and marked superseded." style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="380" y="400" width="560" height="50" as="geometry" />
+        <mxCell id="o6_1" parent="1" style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Show conflict comparison. Facilitator chooses Keep Local, Keep Remote or Merge. Retain the local draft; never silently overwrite it (A3 baseline)." vertex="1">
+          <mxGeometry height="52" width="600" x="380" y="412" as="geometry" />
         </mxCell>
-        <mxCell id="o7_0" value="Server disk fails" style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="40" y="450" width="340" height="50" as="geometry" />
+        <mxCell id="o7_0" parent="1" style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Shared device, second facilitator signs in" vertex="1">
+          <mxGeometry height="52" width="340" x="40" y="464" as="geometry" />
         </mxCell>
-        <mxCell id="o7_1" value="Restore the last backup file. Phones still holding unsent records send them again." style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="380" y="450" width="560" height="50" as="geometry" />
+        <mxCell id="o7_1" parent="1" style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Only the signed-in facilitator&#39;s own workspace is visible; another profile cannot access it without signing in (SR-01)." vertex="1">
+          <mxGeometry height="52" width="600" x="380" y="464" as="geometry" />
+        </mxCell>
+        <mxCell id="o8_0" parent="1" style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Device storage full" vertex="1">
+          <mxGeometry height="52" width="340" x="40" y="516" as="geometry" />
+        </mxCell>
+        <mxCell id="o8_1" parent="1" style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Show a clear Save Failed message and options to free space/retry. Do not report success or overwrite existing data." vertex="1">
+          <mxGeometry height="52" width="600" x="380" y="516" as="geometry" />
+        </mxCell>
+        <mxCell id="o9_0" parent="1" style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Server disk fails" vertex="1">
+          <mxGeometry height="52" width="340" x="40" y="568" as="geometry" />
+        </mxCell>
+        <mxCell id="o9_1" parent="1" style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="Restore from the last backup; unsent phone plans remain queued for retry. Backup/restore still requires implementation and testing." vertex="1">
+          <mxGeometry height="52" width="600" x="380" y="568" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="p7" name="8 ADRs">
-    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+    <mxGraphModel dx="1323" dy="698" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="title" value="8. Architecture Decision Records (complete these)" style="text;html=1;fontSize=20;fontStyle=1;align=left;verticalAlign=top;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="20" y="10" width="900" height="34" as="geometry" />
+        <mxCell id="title" parent="1" style="text;html=1;fontSize=20;fontStyle=1;align=left;verticalAlign=top;whiteSpace=wrap;" value="8. Architecture Decision Records (user-stated choices)" vertex="1">
+          <mxGeometry height="34" width="900" x="20" y="10" as="geometry" />
         </mxCell>
-        <mxCell id="sub" value="Each ADR: context, options, decision, consequences. Options are pre-filled; the team writes the decision and reasons from its own evidence. Owner = one team member each." style="text;html=1;fontSize=12;align=left;verticalAlign=top;whiteSpace=wrap;fontColor=#555555;" vertex="1" parent="1">
-          <mxGeometry x="20" y="44" width="900" height="24" as="geometry" />
+        <mxCell id="a0h" parent="1" style="fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="ADR-01 — Platform: PWA" vertex="1">
+          <mxGeometry height="36" width="420" x="40" y="100" as="geometry" />
         </mxCell>
-        <mxCell id="a0h" value="ADR-01 Offline-first web app" style="fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="40" y="100" width="420" height="36" as="geometry" />
+        <mxCell id="a0b" parent="1" style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=11;spacing=6;" value="Context: offline-first use on shared, low-spec Android devices.&lt;br&gt;Options: online-only web; native Android; offline-first PWA.&lt;br&gt;My decision: PWA.&lt;br&gt;My stated general reason: because it considers users with shared devices.&lt;br&gt;Implications to verify: offline app/activity access and browser/device compatibility.&lt;br&gt;Team approval: not confirmed. Owner: Dinilson." vertex="1">
+          <mxGeometry height="230" width="420" x="40" y="136" as="geometry" />
         </mxCell>
-        <mxCell id="a0b" value="Context: weak or no internet, low-cost phones (QR-05).&#xa;Options: (A) online-only web app; (B) native Android app; (C) offline-first web app (PWA).&#xa;Decision: ______&#xa;Consequences (+/-): ______&#xa;Owner: ______" style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="40" y="136" width="420" height="230" as="geometry" />
+        <mxCell id="a1h" parent="1" style="fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="ADR-02 — Synchronisation: local-first" vertex="1">
+          <mxGeometry height="36" width="420" x="480" y="100" as="geometry" />
         </mxCell>
-        <mxCell id="a1h" value="ADR-02 Write locally first, then sync" style="fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="480" y="100" width="420" height="36" as="geometry" />
+        <mxCell id="a1b" parent="1" style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=11;spacing=6;" value="Context: plans must remain available offline and sync later (FR-04/FR-05).&lt;br&gt;Options: send immediately; save locally and queue sync.&lt;br&gt;My decision: local-first, then queued sync when online.&lt;br&gt;My stated general reason: because it considers users with intermittent connectivity.&lt;br&gt;Verify: stable planId, retries, status and duplicate prevention.&lt;br&gt;Team approval: not confirmed. Owner: Dinilson." vertex="1">
+          <mxGeometry height="230" width="420" x="480" y="136" as="geometry" />
         </mxCell>
-        <mxCell id="a1b" value="Context: saves must survive crashes and lost connections (QR-03).&#xa;Options: (A) send immediately; (B) local outbox with retry and a record ID.&#xa;Decision: ______&#xa;Consequences (+/-): ______&#xa;Owner: ______" style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="480" y="136" width="420" height="230" as="geometry" />
+        <mxCell id="a2h" parent="1" style="fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="ADR-03 — Conflict policy: facilitator chooses" vertex="1">
+          <mxGeometry height="36" width="420" x="40" y="400" as="geometry" />
         </mxCell>
-        <mxCell id="a2h" value="ADR-03 Server storage" style="fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="920" y="100" width="420" height="36" as="geometry" />
+        <mxCell id="a2b" parent="1" style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=11;spacing=6;" value="Context: the same plan may be edited on two devices (FR-05).&lt;br&gt;Options: newest edit wins; facilitator chooses Keep Local / Keep Remote / Merge.&lt;br&gt;My decision: facilitator chooses.&lt;br&gt;My stated general reason: “Authentication and Authorization.”&lt;br&gt;Verify: show comparison and retain local draft until resolved.&lt;br&gt;Team approval: not confirmed. Owner: Dinilson." vertex="1">
+          <mxGeometry height="230" width="420" x="40" y="436" as="geometry" />
         </mxCell>
-        <mxCell id="a2b" value="Context: tiny data volume, volunteer maintainers, no budget (QR-05).&#xa;Options: (A) hosted database; (B) PostgreSQL on own server; (C) SQLite file.&#xa;Decision: ______&#xa;Consequences (+/-): ______&#xa;Owner: ______" style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" vertex="1" parent="1">
-          <mxGeometry x="920" y="136" width="420" height="230" as="geometry" />
+        <mxCell id="a3h" parent="1" style="fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;align=left;whiteSpace=wrap;html=1;fontSize=13;spacing=6;" value="ADR-04 — Storage: SQLite" vertex="1">
+          <mxGeometry height="36" width="420" x="480" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="a3b" parent="1" style="fillColor=#ffffff;strokeColor=#999999;align=left;whiteSpace=wrap;html=1;fontSize=11;spacing=6;" value="Context: synchronised plans need persistent storage.&lt;br&gt;Options: hosted DB; PostgreSQL server; SQLite file.&lt;br&gt;My decision: SQLite. Proposed deployment: SQLite file on the small server; confirm location with team.&lt;br&gt;My stated general reason: Preserve consistency.&lt;br&gt;Verify: persistence, backup/restore, access and concurrent sync.&lt;br&gt;Team approval: not confirmed. Owner: Dinilson." vertex="1">
+          <mxGeometry height="230" width="420" x="480" y="436" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
