@@ -67,3 +67,7 @@ Requirement IDs follow A3 (FR-01 to FR-07, QR-01, QR-02, PR-01, SR-01, AR-01). A
 - Run 1 is kept unedited next to run 2 so the failure and the fix are both visible.
 - Manual tests are marked NOT RUN, not passed. Fill the Result column only after a person has actually run them.
 - Test E15 (contrast) and E14 (timing) are script approximations. State that limit in the report.
+### Group Feedback Fixes (Alfons)
+*   **Test F1: No-results CTA** | *Result: PASS* | *Note: Removed duplicate white button, left single clear action "Clear filters and restart".*
+*   **Test F2: Online Pill Status** | *Result: PASS* | *Note: Added green dot with text fallback for AR-01 accessibility.*
+*   **Test F3: Dynamic Checkboxes** | *Result: PASS* | *Note: Options grey out dynamically to prevent 0-result crashes.*
