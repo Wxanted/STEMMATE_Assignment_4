@@ -1,0 +1,100 @@
+TAP version 13
+# Subtest: U01 FR-01: filter by level returns only that level
+ok 1 - U01 FR-01: filter by level returns only that level
+  ---
+  duration_ms: 1.119221
+  type: 'test'
+  ...
+# Subtest: U02 FR-01: combined level+topic+duration+materials filter returns only matching records
+ok 2 - U02 FR-01: combined level+topic+duration+materials filter returns only matching records
+  ---
+  duration_ms: 0.249962
+  type: 'test'
+  ...
+# Subtest: U03 FR-01: duration bucket boundaries (30, 31, 45, 46, 60, 61)
+ok 3 - U03 FR-01: duration bucket boundaries (30, 31, 45, 46, 60, 61)
+  ---
+  duration_ms: 0.83746
+  type: 'test'
+  ...
+# Subtest: U04 FR-01: a filter with no matches returns an empty list (no crash)
+ok 4 - U04 FR-01: a filter with no matches returns an empty list (no crash)
+  ---
+  duration_ms: 0.2869
+  type: 'test'
+  ...
+# Subtest: U05 FR-02 / A3 check: catalogue has >=30 activities and every one has all required fields
+ok 5 - U05 FR-02 / A3 check: catalogue has >=30 activities and every one has all required fields
+  ---
+  duration_ms: 0.293715
+  type: 'test'
+  ...
+# Subtest: U06 QR-02 / A3 check: every activity payload is <= 1 MB
+ok 6 - U06 QR-02 / A3 check: every activity payload is <= 1 MB
+  ---
+  duration_ms: 0.243972
+  type: 'test'
+  ...
+# Subtest: U07 SR-01: login validation rejects bad email, empty and short passwords
+ok 7 - U07 SR-01: login validation rejects bad email, empty and short passwords
+  ---
+  duration_ms: 0.456302
+  type: 'test'
+  ...
+# Subtest: U08 SR-01: wrong password is rejected, right password creates a session, logout clears it
+ok 8 - U08 SR-01: wrong password is rejected, right password creates a session, logout clears it
+  ---
+  duration_ms: 0.702045
+  type: 'test'
+  ...
+# Subtest: U09 FR-03: saved activity persists (a NEW store over the same storage still reads it)
+ok 9 - U09 FR-03: saved activity persists (a NEW store over the same storage still reads it)
+  ---
+  duration_ms: 0.76877
+  type: 'test'
+  ...
+# Subtest: U10 FR-03: saving the same activity twice does not duplicate it
+ok 10 - U10 FR-03: saving the same activity twice does not duplicate it
+  ---
+  duration_ms: 0.520455
+  type: 'test'
+  ...
+# Subtest: U11 FR-03 failure: storage full raises StorageFullError and earlier saves stay intact
+ok 11 - U11 FR-03 failure: storage full raises StorageFullError and earlier saves stay intact
+  ---
+  duration_ms: 0.336124
+  type: 'test'
+  ...
+# Subtest: U12 SR-01: one user's saved activities are not visible to another profile
+ok 12 - U12 SR-01: one user's saved activities are not visible to another profile
+  ---
+  duration_ms: 0.202984
+  type: 'test'
+  ...
+# Subtest: U13 recovery: corrupted saved data does not crash, is set aside, and saving works again
+ok 13 - U13 recovery: corrupted saved data does not crash, is set aside, and saving works again
+  ---
+  duration_ms: 0.209724
+  type: 'test'
+  ...
+# Subtest: U14 FR-02: an incomplete activity (no safety notes) is refused and not stored
+ok 14 - U14 FR-02: an incomplete activity (no safety notes) is refused and not stored
+  ---
+  duration_ms: 0.153455
+  type: 'test'
+  ...
+# Subtest: U15 FR-03: remove deletes only the chosen activity
+ok 15 - U15 FR-03: remove deletes only the chosen activity
+  ---
+  duration_ms: 0.277586
+  type: 'test'
+  ...
+1..15
+# tests 15
+# suites 0
+# pass 15
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 102.801589
